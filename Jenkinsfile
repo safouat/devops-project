@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker images using docker-compose..."
-                    sh 'docker-compose build'
+                    sh 'docker compose build'
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     echo "Starting services using docker-compose..."
-                    sh 'docker-compose up -d'
+                    sh 'docker compose up -d'
                 }
             }
         }
